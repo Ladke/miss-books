@@ -34,7 +34,7 @@ export default {
     return {
       book: null,
       nextBookId: null,
-      pervBookId: null,
+      prevBookId: null,
     };
   },
   methods: {
@@ -60,7 +60,7 @@ export default {
       });
       bookService.prevBook(bookId).then(prevBook => {
         this.pervBookId = prevBook.id;
-        console.log("prevbookId", prevBook.id);
+        console.log("prevBookId", prevBook.id);
       });
     }
   },

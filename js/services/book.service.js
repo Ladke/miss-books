@@ -408,7 +408,7 @@ function nextBook(bookId) {
 
 function prevBook(bookId) {
   const bookIdx = booksDB.findIndex(book => book.id === bookId);
-  const book = booksDB[bookIdx - 1] ? booksDB[bookIdx - 1] : booksDB[booksDB.length];
+  const book = booksDB[bookIdx - 1] ? booksDB[bookIdx - 1] : booksDB[0];
   return Promise.resolve(book);
 }
 

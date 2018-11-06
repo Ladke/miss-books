@@ -3,6 +3,7 @@
 @import "preview.css";
 @import "bookEdit.css";
 @import "bookDetails.css";
+@import "reviewForm.css";
 
 *{
     font-family: 'Lato', sans-serif;

@@ -6,11 +6,13 @@ export default {
   props: ["book"],
   template: `
            <div>
-               <button @click="onReview=!onReview">{{addReviewBtn}}</button>
-               <button @click="showReviews=!showReviews">{{toggleReviewBtn}}</button>
+                <div class="review-control">
+                  <button @click="onReview=!onReview">{{addReviewBtn}}</button>
+                  <button @click="showReviews=!showReviews">{{toggleReviewBtn}}</button>
+               </div>
                 <form v-if="onReview" @submit.prevent="submitForm">
-                    <div> Name <input type="text"  v-model="review.name" placeholder="John Deer"/></div>
-                    <div> Read at <input type="date"  v-model="review.dateRead" /></div>
+                    <div class="form-input"> Name <input type="text"  v-model="review.name" placeholder="John Deer"/></div>
+                    <div class="form-input"> Read at <input type="date"  v-model="review.dateRead" /></div>
                     <div class="rating"> Rating 
                         <span >
                             <span class="fa fa-star" @click="review.rating = 1"></span>

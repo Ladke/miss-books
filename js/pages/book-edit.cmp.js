@@ -35,10 +35,7 @@ export default {
             ) 
         },
         
-        addBook(googleBook, idx){
-            console.log(idx);
-            console.log(googleBook.volumeInfo);
-            
+        addBook(googleBook, idx){ 
             bookService.addGoogleBook(googleBook)
         },
     },
