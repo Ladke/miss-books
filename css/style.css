@@ -4,6 +4,8 @@
 @import "bookEdit.css";
 @import "bookDetails.css";
 @import "reviewForm.css";
+@import "bookEdit.css";
+
 
 *{
     font-family: 'Lato', sans-serif;

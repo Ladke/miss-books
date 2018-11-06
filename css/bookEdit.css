@@ -10,9 +10,11 @@
     color: rgb(48, 48, 48);
 }
 
-/* .light{
-    color: rgb(145, 145, 145);
-} */
 .search-container{
+    text-align: center;
     padding-left: 20px;
+}
+
+.light{
+    color: rgb(145, 145, 145);
 }

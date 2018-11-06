@@ -5,7 +5,8 @@ export default {
     // props: ["book"],
     template: `
              <div class="search-container">
-                 <input @input="searchBook" type="text" v-model="searchWord" placeholder="Search a Book">
+                 <h4>Search a book to add to the list</h4>
+                 <input @input="searchBook" type="text" v-model="searchWord" placeholder="&nbsp;Search a Book">
                  <ul>
                      <li v-bind:class="{ light: isClicked }" class="search-line flex between" v-if="suggestedBooks" v-for="(book, idx) in suggestedBooks">
                         <span>{{book.volumeInfo.title}}</span> 
