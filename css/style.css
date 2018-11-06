@@ -1,0 +1,141 @@
+@import "animation.css";
+@import "header.css";
+@import "preview.css";
+@import "bookEdit.css";
+@import "bookDetails.css";
+
+*{
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+.flex{
+    display:flex;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.between{
+    justify-content: space-between
+}
+
+.column{
+    flex-direction: column;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    /* padding: 10px; */
+}
+
+
+h4{
+    margin: 0;
+    margin-bottom: 10px;
+    /* line-height: 1.6em; */
+}
+
+
+.details-wrap{
+    border: 1px solid grey;
+    border-radius: 4px;
+    padding: 15px 20px;
+    background-color: rgb(211, 213, 214);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.top-container{
+    margin-bottom: 15px;
+}
+.book-list{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(160px, 1fr));
+    grid-template-rows: repeat(auto-fill , minmax(180px, 1fr));
+    grid-gap: 15px;
+}
+.red{
+    background-color: rgb(243, 159, 145);
+}
+.green{
+    background-color: rgb(145, 243, 150);
+}
+
+.book-img-wrapper{
+    position: relative;
+}
+.sale{
+    position: absolute;
+    transform: scale(0.6);
+    z-index: 1;
+    top: -50px;
+    left: -3a0px;
+
+}
+
+.go-back{
+background-color: rgb(148, 148, 148);
+font-size: 1.2rem;
+border: none;
+padding: 10px;
+border-radius: 4px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+.go{
+    background-color: rgb(148, 148, 148);
+    border: none;
+    padding: 7px;
+    /* border-radius: 4px; */
+}
+.desc{
+    margin-bottom: 20px;
+}
+
+input{
+    height: 25px;
+}
+
+.fa-star{
+    color: rgb(177, 176, 176);
+    transition: 0.3s;
+    padding: 5px 0;
+}
+.fa-star:hover {
+    color: orange;
+}
+.checked {
+    color: orange;
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .6s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+  }
+.rating{
+    margin-bottom: 10px;
+}
+  h4 span{
+      font-size: 1rem;
+      font-weight: normal;
+  }
+
+  .router-link-active{
+      color: greenyellow;
+  }
+
+.user-msg {
+    background-color: lightgray;
+    padding: 10px;;
+    font-size: 1.2rem;
+    position: fixed;
+    top:0;
+    right:0;
+}

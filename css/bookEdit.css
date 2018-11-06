@@ -1,0 +1,18 @@
+.fa-plus-circle{
+    text-align: right;
+}
+.fa-plus-circle:hover{
+    cursor: pointer;
+}
+.search-line{
+    line-height: 2rem;
+    max-width: 420px;
+    color: rgb(48, 48, 48);
+}
+
+/* .light{
+    color: rgb(145, 145, 145);
+} */
+.search-container{
+    padding-left: 20px;
+}

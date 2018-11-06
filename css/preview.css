@@ -1,0 +1,47 @@
+ul{
+    padding: 0;
+
+}
+
+.book-card>img{
+    width: 100%;
+}
+
+div>img{
+    height: 250px;
+}
+
+.book-card{
+
+    text-transform: capitalize;
+    list-style-type: none;
+    padding: 10px;
+    text-decoration: none;
+    background-color: rgb(211, 211, 211);
+    border: 1px solid grey;
+    transition: 0.3s
+}
+
+.book-card:hover{
+    cursor: pointer;
+    outline: 2px solid grey;
+}
+
+.info-box{
+    position: relative;
+}
+.close-btn{
+    font-size: 30px;
+    color: rgb(49, 49, 49);
+    display: absolute;
+    margin-bottom: 10px;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+}
+
+.preview-title{
+    height: 38px;
+    overflow: hidden;
+}

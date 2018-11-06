@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>MissBooks</title>
+</head>
+<body>
+    <div id="app">
+        <header class=" flex row between">
+            <div class="logo"><img src="./img/books.png" alt=""></div>
+            <nav>
+                <router-link exact to="/">Home</router-link>
+                <router-link to="/about">About</router-link>
+                <router-link exact to="/book">Book List</router-link>
+                <router-link to="/book/edit">Add Book</router-link>
+            </nav>
+
+        </header>
+        <router-view></router-view>
+        <user-msg></user-msg>
+    </div>
+    
+    <script src="lib/axios.js"></script>
+    <script src="lib/vue.js"></script>
+    <script src="lib/vue-router.js"></script>
+    <script type="module" src="js/main.js"></script>    
+</body>
+</html>
