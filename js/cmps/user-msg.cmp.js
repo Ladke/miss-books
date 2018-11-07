@@ -15,10 +15,10 @@ export default {
         }
     },
     created() {
-        console.log('msss')
+        console.log()
         eventBus.$on(SHOW_USER_MSG, msg=>{
             this.msg = msg;
-            var delay = 3000;
+            var delay = 4000;
             setTimeout(()=>{
                 this.msg = null;
             }, delay)

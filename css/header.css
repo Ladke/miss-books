@@ -21,9 +21,14 @@ header a{
     transition: 0.3s;
 }
 
+.router-link-active{
+    color: greenyellow;
+    font-size: 1.3rem;
+  }
+
 header a:hover{
     color: greenyellow;
-    /* transform: scale(1.15) */
+    font-size: 1.3rem;
 }
 
 .logo img{

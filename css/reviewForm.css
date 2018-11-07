@@ -6,3 +6,17 @@
     margin-bottom: 15px;
 
 }
+
+.review-container{
+    margin-bottom: 15px;
+}
+
+.closeRev:hover{
+    cursor: pointer;
+}
+
+.closeRev{
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px;
+}

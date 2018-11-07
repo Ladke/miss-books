@@ -7,11 +7,12 @@ query();
 export const bookService = {
   query,
   getBookById,
-  addReview,
   searchGoogleBook,
   addGoogleBook,
   nextBook,
   prevBook,
+  addReview,
+  deleteReview,
 };
 
 function _booksFromJson() {
@@ -459,7 +460,14 @@ function addReview(bookId, review) {
   if (!book.reviews) book.reviews = [];
   book.reviews.push(review);
   storageService.store(BOOKS_KEY, booksDB);
-  // Vue.set(book, 'reviews', [review])
+
+}
+
+function deleteReview(bookId, idx){
+  var book = booksDB.find(book => book.id === bookId);
+  book.reviews.splice(idx,1);
+  storageService.store(BOOKS_KEY, booksDB);
+
 }
 
 function createBook() {

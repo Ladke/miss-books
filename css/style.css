@@ -61,10 +61,10 @@ h4{
     grid-gap: 15px;
 }
 .red{
-    background-color: rgb(243, 159, 145);
+    border: 2px solid red
 }
 .green{
-    background-color: rgb(145, 243, 150);
+    border: 2px solid rgb(25, 146, 9)
 }
 
 .book-img-wrapper{
@@ -130,15 +130,21 @@ input{
       font-weight: normal;
   }
 
-  .router-link-active{
-      color: greenyellow;
-  }
 
 .user-msg {
-    background-color: lightgray;
-    padding: 10px;;
-    font-size: 1.2rem;
     position: fixed;
-    top:0;
-    right:0;
+    right: calc(100vw/2.3);
+    top: 200px;
+    text-align: center;
+    width: 250px;
+    height: 80px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 1.4rem;
+
+    
+
+   
 }

@@ -6,9 +6,9 @@ export default {
     template: `
              <div class="search-container">
                  <h4>Search a book to add to the list</h4>
-                 <input @input="searchBook" type="text" v-model="searchWord" placeholder="&nbsp;Search a Book">
+                 <input @input="searchBook" type="text" v-model="searchWord" placeholder="  Search a Book">
                  <ul>
-                     <li v-bind:class="{ light: isClicked }" class="search-line flex between" v-if="suggestedBooks" v-for="(book, idx) in suggestedBooks">
+                     <li :class="{ light: isClicked }" class="search-line flex between" v-if="suggestedBooks" v-for="(book, idx) in suggestedBooks">
                         <span>{{book.volumeInfo.title}}</span> 
                         <span  @click="addBook(book, idx)"><i title="Click To Add Book" @click="isClicked=true" class="fas fa-plus-circle"></i></span>
                      </li>

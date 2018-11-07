@@ -8,7 +8,6 @@ export default {
             <div class="top-container flex row between">
                 <div class="info-box">
                 <div class="close-btn" @click="backToList" t><i class="fas fa-times"></i></div>
-                  <!-- <button ">Back</button> -->
                   <h4>Title: {{book.title}}</h4>
                   <h4>{{age}} </h4>
                   <h4>{{bookLength}}</h4>
@@ -25,7 +24,7 @@ export default {
             <div class="desc">{{this.book.description}}</div>
             <div class="prev-next-btn flex between">
               <router-link :to="'/book/'+prevBookId">< Previous Book</router-link>
-                <router-link class="test" :to="'/book/'+nextBookId">Next Book ></router-link>
+              <router-link :to="'/book/'+nextBookId">Next Book ></router-link>
             </div>
             <review-form :book="this.book"></review-form>
         </div>
@@ -41,25 +40,18 @@ export default {
     backToList() {
       this.$router.push("/book");
     },
-    // getBookById() {
-    //   bookService.getBookById(this.$route.params.bookId)
-    //   .then(book => this.book = book)
-    // },
 
     loadBookData() {
       const bookId = this.$route.params.bookId;
-      console.log('routerBookId',bookId)
       bookService.getBookById(bookId).then(book => {
         this.book = book;
-        console.log({ book });
       });
-
       bookService.nextBook(bookId).then(nextBook => {
         this.nextBookId = nextBook.id;
         console.log("nextbookId", nextBook.id);
       });
       bookService.prevBook(bookId).then(prevBook => {
-        this.pervBookId = prevBook.id;
+        this.prevBookId = prevBook.id;
         console.log("prevBookId", prevBook.id);
       });
     }
@@ -100,15 +92,13 @@ export default {
   },
   created() {
     this.loadBookData();
-
-    // this.getBookById();
   },
   components: {
     reviewForm
   },
   watch: {
     "$route.params.bookId": function(id, prevValue) {
-      console.log("Watch - ROUTE PARAM WAS CHANGED", id, "PREV:", prevValue);
+      // console.log("Watch - ROUTE PARAM WAS CHANGED", id, "PREV:", prevValue);
       this.loadBookData();
     }
   }

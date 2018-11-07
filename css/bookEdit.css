@@ -5,9 +5,12 @@
     cursor: pointer;
 }
 .search-line{
+    margin: 0 auto;
     line-height: 2rem;
     max-width: 420px;
     color: rgb(48, 48, 48);
+    transition: 0.3s;
+    
 }
 
 .search-container{
